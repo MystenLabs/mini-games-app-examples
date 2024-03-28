@@ -7,9 +7,10 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Web3 Mini Games - by Mysten Labs",
-  description: "A collection of mini games, to inspire the Sui community.",
-  metadataBase: new URL("https://mini-games-app-examples.vercel.app/"),
+  title: "Precedent - Building blocks for your Next.js project",
+  description:
+    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+  metadataBase: new URL("https://precedent.dev"),
   themeColor: "#FFF",
 };
 
