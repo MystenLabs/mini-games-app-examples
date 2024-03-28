@@ -52,7 +52,7 @@ export default async function Home() {
 
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
-        {features.map(({title, description, demo, large}) => (
+        {features.map(({title, description, demo, githubUrl}) => (
             <Card
                 key={title}
                 title={title}
@@ -64,7 +64,7 @@ export default async function Home() {
                       demo
                   )
                 }
-                large={large}
+                githubUrl={githubUrl}
             />
         ))}
       </div>
@@ -76,7 +76,7 @@ const features = [
   {
     title: "Blackjack",
     description:
-      "A classic card game, where the goal is to beat the dealer by getting as close to 21 as possible without going over.",
+      "Beat the dealer by getting as close to 21 as possible without going over.",
     demo: (
       <a href={'https://blackjack-sui.vercel.app/'}>
         <Image
@@ -89,13 +89,12 @@ const features = [
         />
       </a>
     ),
-      docsUrl: 'https://docs.sui.io/guides/developer/app-examples/blackjack',
-      githubUrl: 'https://github.com/MystenLabs/blackjack-sui/tree/main'
+      githubUrl: 'https://github.com/MystenLabs/blackjack-sui'
   },
     {
         title: "Satoshi Coin Flip",
         description:
-           "A simple coin flip game, where you can bet on heads or tails.",
+           "A simple coin flip game, where you can bet that the result will be either heads or tails.",
         demo: (
             <a href={"https://satoshi-flip.mystenlabs.com/"}>
                 <Image
@@ -108,11 +107,12 @@ const features = [
                 />
             </a>
         ),
+        githubUrl: 'https://github.com/MystenLabs/satoshi-coin-flip-internal'
     },
     {
         title: "Plinko",
         description:
-            "Plinko is a game where you drop a ball and it bounces around a series of pegs until it lands in a slot at the bottom.",
+            "Bet on balls that bounce around a series of pegs until they lands in a slot.",
         demo: (
             <a href={"https://plinko-poc.vercel.app/"}>
                 <Image
@@ -125,6 +125,7 @@ const features = [
                 />
             </a>
         ),
+        githubUrl: 'https://github.com/MystenLabs/plinko-poc/'
     },
     {
         title: "Solitaire",
@@ -142,5 +143,6 @@ const features = [
                 />
             </a>
         ),
+        githubUrl: 'https://github.com/mystenLabs/solitaire'
     },
 ];
