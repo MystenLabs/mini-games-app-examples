@@ -121,7 +121,7 @@ const features = [
         description:
             "A single player card game, where the goal is to move all cards to the foundation piles.",
         demo: (
-            <a href={'https://mysten-solitaire.vercel.app/game'}>
+            <a href={'https://mysten-solitaire.vercel.app/'}>
                 <Image
                     src="https://images.unsplash.com/photo-1501003878151-d3cb87799705?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Image of Solitaire"
