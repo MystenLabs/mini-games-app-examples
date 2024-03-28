@@ -49,23 +49,7 @@ export default async function Home() {
         >
           A collection of mini games, to inspire the community of Sui.
         </p>
-        <div
-            className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
-            style={{animationDelay: "0.3s", animationFillMode: "forwards"}}
-        >
-          <a
-              className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-              href="https://github.com/steven-tey/precedent"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            <Github/>
-            <p>
-              <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
-              <span className="font-semibold">{nFormatter(stars)}</span>
-            </p>
-          </a>
-        </div>
+
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
         {features.map(({title, description, demo, large}) => (
@@ -105,6 +89,8 @@ const features = [
         />
       </a>
     ),
+      docsUrl: 'https://docs.sui.io/guides/developer/app-examples/blackjack',
+      githubUrl: 'https://github.com/MystenLabs/blackjack-sui/tree/main'
   },
     {
         title: "Satoshi Coin Flip",
