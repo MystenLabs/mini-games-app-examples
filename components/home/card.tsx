@@ -17,7 +17,7 @@ export default function Card({
 }) {
   return (
       <div
-          className={`relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
+          className={`flex flex-col justify-around relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
               large ? "md:col-span-2" : ""
           } `}
       >
@@ -54,7 +54,7 @@ export default function Card({
               </div>
 
               <a
-                  className="mb-2 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+                  className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
