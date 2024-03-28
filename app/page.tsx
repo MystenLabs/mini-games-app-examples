@@ -67,7 +67,7 @@ export default async function Home() {
           </a>
         </div>
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
         {features.map(({title, description, demo, large}) => (
             <Card
                 key={title}
@@ -90,57 +90,71 @@ export default async function Home() {
 
 const features = [
   {
-    title: "Beautiful, reusable components",
+    title: "Blackjack",
     description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), and [Framer Motion](https://framer.com/motion)",
-    large: true,
-  },
-  {
-    title: "Performance first",
-    description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
-    demo: <WebVitals />,
-  },
-  {
-    title: "One-click Deploy",
-    description:
-      "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
+      "A classic card game, where the goal is to beat the dealer by getting as close to 21 as possible without going over.",
     demo: (
-      <a href={DEPLOY_URL}>
+      <a href={'https://blackjack-sui.vercel.app/'}>
         <Image
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={120}
-          height={30}
+          src="https://images.unsplash.com/photo-1611210991827-c46845fc502c?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Image of Blackjack"
+          width={300}
+          height={300}
+          className={'rounded-lg hover:opacity-70'}
           unoptimized
         />
       </a>
     ),
   },
-  {
-    title: "Built-in Auth + Database",
-    description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
-    demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
-        <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
-      </div>
-    ),
-  },
-  {
-    title: "Hooks, utilities, and more",
-    description:
-      "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
-    demo: (
-      <div className="grid grid-flow-col grid-rows-3 gap-10 p-10">
-        <span className="font-mono font-semibold">useIntersectionObserver</span>
-        <span className="font-mono font-semibold">useLocalStorage</span>
-        <span className="font-mono font-semibold">useScroll</span>
-        <span className="font-mono font-semibold">nFormatter</span>
-        <span className="font-mono font-semibold">capitalize</span>
-        <span className="font-mono font-semibold">truncate</span>
-      </div>
-    ),
-  },
+    {
+        title: "Satoshi Coin Flip",
+        description:
+           "A simple coin flip game, where you can bet on heads or tails.",
+        demo: (
+            <a href={"https://satoshi-flip.mystenlabs.com/"}>
+                <Image
+                    src="https://images.unsplash.com/photo-1579758258316-57081bac8ea8?q=80&w=3350&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Image of Satoshi Coin Flip"
+                    width={300}
+                    height={300}
+                    className={'rounded-lg hover:opacity-70'}
+                    unoptimized
+                />
+            </a>
+        ),
+    },
+    {
+        title: "Plinko",
+        description:
+            "Plinko is a game where you drop a ball and it bounces around a series of pegs until it lands in a slot at the bottom.",
+        demo: (
+            <a href={"https://plinko-poc.vercel.app/"}>
+                <Image
+                    src="https://images.unsplash.com/photo-1550534790-5724c29d08f1?q=80&w=3360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Image of Plinko"
+                    width={300}
+                    height={300}
+                    className={'rounded-lg hover:opacity-70'}
+                    unoptimized
+                />
+            </a>
+        ),
+    },
+    {
+        title: "Solitaire",
+        description:
+            "A single player card game, where the goal is to move all cards to the foundation piles.",
+        demo: (
+            <a href={'https://mysten-solitaire.vercel.app/game'}>
+                <Image
+                    src="https://images.unsplash.com/photo-1501003878151-d3cb87799705?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Image of Solitaire"
+                    width={300}
+                    height={300}
+                    className={'rounded-lg hover:opacity-70'}
+                    unoptimized
+                />
+            </a>
+        ),
+    },
 ];
