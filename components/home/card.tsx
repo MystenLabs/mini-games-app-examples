@@ -17,7 +17,7 @@ export default function Card({
 }) {
   return (
       <div
-          className={`flex flex-col justify-around relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
+          className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-gray-200 bg-white shadow-md ${
               large ? "md:col-span-2" : ""
           } `}
       >
