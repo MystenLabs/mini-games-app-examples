@@ -1,6 +1,10 @@
 import Card from "@/components/home/card";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
+import blackjack from "../public/minigames/blackjack.avif";
+import coinflip from "../public/minigames/coinflip.avif";
+import plinko from "../public/minigames/plinko.avif";
+import solitaire from "../public/minigames/solitaire.avif";
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
@@ -65,11 +69,11 @@ const features = [
     demo: (
       <a href={'https://blackjack-sui.vercel.app/'}>
         <Image
-          src="https://images.unsplash.com/photo-1611210991827-c46845fc502c?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={blackjack}
           alt="Image of Blackjack"
           width={300}
           height={300}
-          className={'rounded-lg hover:opacity-70'}
+          className={'rounded-lg hover:opacity-70 animate-fade-down'}
           unoptimized
         />
       </a>
@@ -83,11 +87,11 @@ const features = [
         demo: (
             <a href={"https://satoshi-flip.mystenlabs.com/"}>
                 <Image
-                    src="https://images.unsplash.com/photo-1579758258316-57081bac8ea8?q=80&w=3350&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={coinflip}
                     alt="Image of Satoshi Coin Flip"
                     width={300}
                     height={300}
-                    className={'rounded-lg hover:opacity-70'}
+                    className={'rounded-lg hover:opacity-70 animate-fade-down'}
                     unoptimized
                 />
             </a>
@@ -101,11 +105,11 @@ const features = [
         demo: (
             <a href={"https://plinko-poc.vercel.app/"}>
                 <Image
-                    src="https://images.unsplash.com/photo-1550534790-5724c29d08f1?q=80&w=3360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={plinko}
                     alt="Image of Plinko"
                     width={300}
                     height={300}
-                    className={'rounded-lg hover:opacity-70'}
+                    className={'rounded-lg hover:opacity-70 animate-fade-down'}
                     unoptimized
                 />
             </a>
@@ -119,11 +123,11 @@ const features = [
         demo: (
             <a href={'https://mysten-solitaire.vercel.app/'}>
                 <Image
-                    src="https://images.unsplash.com/photo-1501003878151-d3cb87799705?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={solitaire}
                     alt="Image of Solitaire"
                     width={300}
                     height={300}
-                    className={'rounded-lg hover:opacity-70'}
+                    className={'rounded-lg hover:opacity-70 animate-fade-down'}
                     unoptimized
                 />
             </a>
