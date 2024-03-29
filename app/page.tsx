@@ -98,7 +98,7 @@ const features = [
                 />
             </a>
         ),
-        githubUrl: 'https://github.com/MystenLabs/satoshi-coin-flip-internal',
+        githubUrl: 'https://github.com/MystenLabs/satoshi-coin-flip',
         docsUrl: 'https://docs.sui.io/guides/developer/app-examples/coin-flip'
     },
     {
