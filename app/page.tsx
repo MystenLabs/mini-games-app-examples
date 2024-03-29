@@ -41,7 +41,7 @@ export default async function Home() {
 
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
-        {features.map(({title, description, demo, githubUrl}) => (
+        {features.map(({title, description, demo, githubUrl, docsUrl}) => (
             <Card
                 key={title}
                 title={title}
@@ -54,6 +54,7 @@ export default async function Home() {
                   )
                 }
                 githubUrl={githubUrl}
+                docsUrl={docsUrl}
             />
         ))}
       </div>
@@ -78,7 +79,8 @@ const features = [
         />
       </a>
     ),
-      githubUrl: 'https://github.com/MystenLabs/blackjack-sui'
+      githubUrl: 'https://github.com/MystenLabs/blackjack-sui',
+      docsUrl: 'https://docs.sui.io/guides/developer/app-examples/blackjack'
   },
     {
         title: "Satoshi Coin Flip",
@@ -96,7 +98,8 @@ const features = [
                 />
             </a>
         ),
-        githubUrl: 'https://github.com/MystenLabs/satoshi-coin-flip-internal'
+        githubUrl: 'https://github.com/MystenLabs/satoshi-coin-flip-internal',
+        docsUrl: 'https://docs.sui.io/guides/developer/app-examples/coin-flip'
     },
     {
         title: "Plinko",
@@ -114,7 +117,8 @@ const features = [
                 />
             </a>
         ),
-        githubUrl: 'https://github.com/MystenLabs/plinko-poc/'
+        githubUrl: 'https://github.com/MystenLabs/plinko-poc/',
+        docsUrl: 'https://docs.sui.io/guides/developer/app-examples/plinko'
     },
     {
         title: "Solitaire",
@@ -132,6 +136,7 @@ const features = [
                 />
             </a>
         ),
-        githubUrl: 'https://github.com/mystenLabs/solitaire'
+        githubUrl: 'https://github.com/mystenLabs/solitaire',
+        docsUrl: 'https://docs.sui.io/guides/developer/app-examples/solitaire'
     },
 ];

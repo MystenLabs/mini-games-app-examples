@@ -6,13 +6,14 @@ import {nFormatter} from "@/lib/utils";
 export default function Card({
   title,
   description,
-  demo, githubUrl,
+  demo, githubUrl, docsUrl,
   large,
 }: {
   title: string;
   description: string;
   demo: ReactNode;
   githubUrl: string;
+  docsUrl: string;
   large?: boolean;
 }) {
   return (
@@ -52,18 +53,31 @@ export default function Card({
                       {description}
                   </ReactMarkdown>
               </div>
+              <div className={'flex flex-row gap-2'}>
+                  <a
+                      className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+                      href={docsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                  >
+                      <p>📖</p>
+                      <p>
+                          <span className="hidden sm:inline-block">Docs{" "}</span>
+                      </p>
+                  </a>
+                  <a
+                      className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                  >
+                      <Github/>
+                      <p>
+                          <span className="hidden sm:inline-block">Repo{" "}</span>
+                      </p>
+                  </a>
 
-              <a
-                  className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-              >
-                  <Github/>
-                  <p>
-                      <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
-                  </p>
-              </a>
+              </div>
           </div>
 
       </div>
