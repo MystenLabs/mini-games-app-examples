@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
 import { Session } from "next-auth";
-import mystenlabsLogo from "../../app/mystenlabs-logo.svg";
+import suilogo from "../../app/sui_logo.png";
 
 
 export default function NavBar({ session }: { session: Session | null }) {
@@ -20,10 +20,10 @@ export default function NavBar({ session }: { session: Session | null }) {
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
-          <Link href="https://mystenlabs.com/" className="flex items-center font-display text-2xl">
+          <Link href="https://sui.io/" className="flex items-center font-display text-2xl">
             <Image
-              src={mystenlabsLogo}
-              alt="Precedent logo"
+              src={suilogo}
+              alt="Sui logo"
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
