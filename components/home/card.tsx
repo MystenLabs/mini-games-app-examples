@@ -2,11 +2,13 @@ import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import {Github} from "@/components/shared/icons";
 import {nFormatter} from "@/lib/utils";
+import Tooltip from "@/components/shared/tooltip";
 
 export default function Card({
   title,
   description,
   demo, githubUrl, docsUrl,
+    unavailable,
   large,
 }: {
   title: string;
@@ -14,20 +16,44 @@ export default function Card({
   demo: ReactNode;
   githubUrl: string;
   docsUrl: string;
+  unavailable?: boolean;
   large?: boolean;
 }) {
-  return (
-      <div
-          className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-gray-200 bg-white shadow-md ${
-              large ? "md:col-span-2" : ""
-          } `}
+  const docs = (
+      <a
+          className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+          href={docsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
       >
+          <p>📖</p>
+          <p>
+              <span className="hidden sm:inline-block">Docs{" "}</span>
+          </p>
+      </a>
+  )
 
-          <h2 className="flex justify-center items-center bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
-              {title}
-          </h2>
-          <div className="flex h-60 items-center justify-center">{demo}</div>
-          <div className="mx-auto max-w-md text-center flex flex-col items-center">
+    const docsUnavailable = (<div
+        className="select-none py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+    >
+        <p>🚧</p>
+        <p>
+            <span className="hidden sm:inline-block">Docs{" "}</span>
+        </p>
+    </div>
+    )
+    return (
+        <div
+            className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-gray-200 bg-white shadow-md ${
+                large ? "md:col-span-2" : ""
+            } `}
+        >
+
+            <h2 className="flex justify-center items-center bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
+                {title}
+            </h2>
+            <div className="flex h-60 items-center justify-center">{demo}</div>
+            <div className="mx-auto max-w-md text-center flex flex-col items-center">
 
               <div className="prose-sm mt-3 leading-normal text-gray-500 [text-wrap:balance] md:prose">
                   <ReactMarkdown
@@ -54,17 +80,12 @@ export default function Card({
                   </ReactMarkdown>
               </div>
               <div className={'flex flex-row gap-2'}>
-                  <a
-                      className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-                      href={docsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                  >
-                      <p>📖</p>
-                      <p>
-                          <span className="hidden sm:inline-block">Docs{" "}</span>
-                      </p>
-                  </a>
+                  {unavailable && (
+                      <Tooltip content={"Coming soon!"}>
+                          {docsUnavailable}
+                      </Tooltip>
+                  )}
+                  {!unavailable && docs}
                   <a
                       className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
                       href={githubUrl}
