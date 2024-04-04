@@ -1,10 +1,10 @@
 import Card from "@/components/home/card";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
-import blackjack from "../public/minigames/blackjack.avif";
-import coinflip from "../public/minigames/coinflip.avif";
-import plinko from "../public/minigames/plinko.avif";
-import solitaire from "../public/minigames/solitaire.avif";
+import blackjack from "../public/minigames/blackjack.svg";
+import coinflip from "../public/minigames/coinflip.svg";
+import plinko from "../public/minigames/plinko.svg";
+import solitaire from "../public/minigames/solitaire.svg";
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
