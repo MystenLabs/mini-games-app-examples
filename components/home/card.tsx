@@ -44,7 +44,7 @@ export default function Card({
     )
     return (
         <div
-            className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-blue-950 shadow-md ${
+            className={`py-6 px-4 flex flex-col gap-5 justify-around relative col-span-1 rounded-xl border border-blue-950 shadow-md ${
                 large ? "md:col-span-2" : ""
             } `}
             style={{backgroundColor: 'rgb(22,25,59)' }}
@@ -53,7 +53,7 @@ export default function Card({
             <h2 className="flex justify-center items-center text-white bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
                 {title}
             </h2>
-            <div className="flex h-60 items-center justify-center">{demo}</div>
+            <div className="flex items-center justify-center">{demo}</div>
             <div className="mx-auto max-w-md text-center flex flex-col items-center">
 
               <div className="prose-sm mt-3 leading-normal text-white ">

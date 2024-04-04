@@ -23,6 +23,7 @@ export default async function Home() {
     .then((res) => res.json())
     .catch((e) => console.log(e));
 
+
   return (
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
@@ -40,7 +41,7 @@ export default async function Home() {
         </p>
 
       </div>
-      <div className="my-20 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
+      <div className="my-20 grid max-w-screen-xl animate-fade-up grid-cols-1 gap-10 px-5 md:grid-cols-2 xl:px-0">
         {features.map(({title, description, demo, githubUrl, docsUrl, unavailable}) => (
             <Card
                 key={title}
@@ -63,18 +64,20 @@ export default async function Home() {
   );
 }
 
+const imageDimensions = { width: 420, height: 420 };
+
 const features = [
   {
     title: "Blackjack",
     description:
       "Beat the dealer by getting as close to 21 as possible without going over.",
     demo: (
-      <a href={'https://blackjack-sui.vercel.app/'}>
+      <a href={'https://blackjack-sui.vercel.app/'} target={'_blank'} rel="noreferrer">
         <Image
           src={blackjack}
           alt="Image of Blackjack"
-          width={300}
-          height={300}
+          width={imageDimensions.width}
+          height={imageDimensions.height}
           className={'rounded-lg hover:opacity-70 animate-fade-down'}
           unoptimized
         />
@@ -88,12 +91,12 @@ const features = [
         description:
            "A simple coin flip game, where you can bet that the result will be either heads or tails.",
         demo: (
-            <a href={"https://satoshi-flip.mystenlabs.com/"}>
+            <a href={"https://satoshi-flip.mystenlabs.com/"} target={'_blank'} rel="noreferrer">
                 <Image
                     src={coinflip}
                     alt="Image of Satoshi Coin Flip"
-                    width={300}
-                    height={300}
+                    width={imageDimensions.width}
+                    height={imageDimensions.height}
                     className={'rounded-lg hover:opacity-70 animate-fade-down'}
                     unoptimized
                 />
@@ -107,12 +110,12 @@ const features = [
         description:
             "Bet on balls that bounce around a series of pegs until they lands in a slot.",
         demo: (
-            <a href={"https://plinko-poc.vercel.app/"}>
+            <a href={"https://plinko-poc.vercel.app/"} target={'_blank'} rel="noreferrer">
                 <Image
                     src={plinko}
                     alt="Image of Plinko"
-                    width={300}
-                    height={300}
+                    width={imageDimensions.width}
+                    height={imageDimensions.height}
                     className={'rounded-lg hover:opacity-70 animate-fade-down'}
                     unoptimized
                 />
@@ -126,12 +129,12 @@ const features = [
         description:
             "A single player card game, where the goal is to move all cards to the foundation piles.",
         demo: (
-            <a href={'https://mysten-solitaire.vercel.app/'}>
+            <a href={'https://mysten-solitaire.vercel.app/'} target={'_blank'} rel="noreferrer">
                 <Image
                     src={solitaire}
                     alt="Image of Solitaire"
-                    width={300}
-                    height={300}
+                    width={imageDimensions.width}
+                    height={imageDimensions.height}
                     className={'rounded-lg hover:opacity-70 animate-fade-down'}
                     unoptimized
                 />
