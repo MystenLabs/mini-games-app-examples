@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import {Github} from "@/components/shared/icons";
 import {nFormatter} from "@/lib/utils";
 import Tooltip from "@/components/shared/tooltip";
+import OpenBook from "@/components/shared/icons/openBook";
 
 export default function Card({
   title,
@@ -21,12 +22,12 @@ export default function Card({
 }) {
   const docs = (
       <a
-          className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+          className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
           href={docsUrl}
           target="_blank"
           rel="noopener noreferrer"
       >
-          <p>📖</p>
+          <OpenBook/>
           <p>
               <span className="hidden sm:inline-block">Docs{" "}</span>
           </p>
@@ -34,7 +35,7 @@ export default function Card({
   )
 
     const docsUnavailable = (<div
-        className="select-none py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+        className="select-none py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
     >
         <p>🚧</p>
         <p>
@@ -88,7 +89,7 @@ export default function Card({
                   )}
                   {!unavailable && docs}
                   <a
-                      className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+                      className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
                       href={githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
