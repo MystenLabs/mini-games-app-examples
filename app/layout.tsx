@@ -5,7 +5,7 @@ import { sfPro, inter } from "./fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
-import backgroundImage from './layout-background.jpg';
+import backgroundImage from './bg-layout.svg';
 
 export const metadata = {
   title: "Web3 Mini Games",
@@ -24,10 +24,10 @@ export default async function RootLayout({
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full" style={{
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom center',
           backgroundSize: 'cover',
           backgroundImage: `url(${backgroundImage.src})`,
-          filter: 'brightness(0.5)',
+          filter: 'brightness(0.4)',
         }} />
         <Suspense fallback="...">
           <Nav />
