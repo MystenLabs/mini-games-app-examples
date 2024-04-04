@@ -15,6 +15,7 @@ module.exports = {
       animation: {
         // Fade up and down
         "fade-up": "fade-up 0.5s",
+        "fade-up-subtitle": "fade-up-subtitle 0.5s",
         "fade-down": "fade-down 0.5s",
         // Tooltip
         "slide-up-fade": "slide-up-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -32,6 +33,19 @@ module.exports = {
           },
           "100%": {
             opacity: 1,
+            transform: "translateY(0px)",
+          },
+        },
+        "fade-up-subtitle": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(10px)",
+          },
+          "80%": {
+            opacity: 0.5,
+          },
+          "100%": {
+            opacity: 0.8,
             transform: "translateY(0px)",
           },
         },
