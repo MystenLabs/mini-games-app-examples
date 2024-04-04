@@ -33,14 +33,14 @@ export default async function Home() {
             Web3 Mini Games <br/>built on Sui
         </h1>
           <p
-              className="mt-6 animate-fade-up-subtitle text-center text-white opacity-0 [text-wrap:balance] md:text-xl"
+              className="mt-12 animate-fade-up-subtitle text-center text-white opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards", }}
         >
           A collection of mini games, to inspire the community of Sui.
         </p>
 
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
+      <div className="my-20 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
         {features.map(({title, description, demo, githubUrl, docsUrl, unavailable}) => (
             <Card
                 key={title}
