@@ -5,6 +5,8 @@ import blackjack from "../public/minigames/blackjack.svg";
 import coinflip from "../public/minigames/coinflip.svg";
 import plinko from "../public/minigames/plinko.svg";
 import solitaire from "../public/minigames/solitaire.svg";
+import Link from "next/link";
+import suilogo from "@/app/sui_logo.svg";
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
@@ -26,29 +28,38 @@ export default async function Home() {
 
   return (
     <>
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-        <h1
-          className="animate-fade-up text-white bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
-          style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
-        >
-            Web3 Mini Games <br/>built on Sui
-        </h1>
-          <p
-              className="mt-12 animate-fade-up-subtitle text-center text-white opacity-0 [text-wrap:balance] md:text-xl"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards", }}
-        >
-          A collection of mini games, to inspire the community of Sui.
-        </p>
+        <div className="z-10 w-full px-5 xl:px-0">
+            <div className="mx-5 mb-10 flex h-16 items-center justify-center ">
+                <Link href="https://sui.io/" className="flex items-center font-display text-2xl">
+                    <Image
+                        src={suilogo}
+                        alt="Sui logo"
+                        className="mr-2 rounded-sm"
+                    ></Image>
+                </Link>
+            </div>
+            <h1
+                className="animate-fade-up text-white bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
+                style={{animationDelay: "0.15s", animationFillMode: "forwards"}}
+            >
+                Web3 Mini Games <br/>built on Sui
+            </h1>
+            <p
+                className="mt-12 animate-fade-up-subtitle text-center text-white opacity-0 [text-wrap:balance] md:text-xl"
+                style={{animationDelay: "0.25s", animationFillMode: "forwards",}}
+            >
+                A collection of mini games, to inspire the community of Sui.
+            </p>
 
-      </div>
-      <div className="my-20 grid max-w-screen-xl animate-fade-up grid-cols-1 gap-10 px-5 md:grid-cols-2 xl:px-0">
-        {features.map(({title, description, demo, githubUrl, docsUrl, unavailable}) => (
-            <Card
-                key={title}
-                title={title}
-                description={description}
-                demo={
-                  title === "Beautiful, reusable components" ? (
+        </div>
+        <div className="my-20 grid max-w-screen-xl animate-fade-up grid-cols-1 gap-10 px-5 md:grid-cols-2 xl:px-0">
+            {features.map(({title, description, demo, githubUrl, docsUrl, unavailable}) => (
+                <Card
+                    key={title}
+                    title={title}
+                    description={description}
+                    demo={
+                        title === "Beautiful, reusable components" ? (
                       <ComponentGrid/>
                   ) : (
                       demo
