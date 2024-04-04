@@ -22,7 +22,7 @@ export default function Card({
 }) {
   const docs = (
       <a
-          className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
+          className="w-full py-2 my-3 mb-5 flex items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
           href={docsUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -35,7 +35,7 @@ export default function Card({
   )
 
     const docsUnavailable = (<div
-        className="select-none py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
+        className="w-full select-none py-2 my-3 mb-5 flex items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
     >
         <p>🚧</p>
         <p>
@@ -57,7 +57,7 @@ export default function Card({
             <div className="flex items-center justify-center">{demo}</div>
             <div className="mx-auto max-w-md text-center flex flex-col items-center">
 
-              <div className="prose-sm mt-3 leading-normal text-white ">
+              <div className="w-full prose-sm mt-3 leading-normal text-white ">
                   <ReactMarkdown
                       components={{
                           a: ({node, ...props}) => (
@@ -81,7 +81,7 @@ export default function Card({
                       {description}
                   </ReactMarkdown>
               </div>
-              <div className={'flex flex-row gap-2'}>
+              <div className={'w-full flex flex-row gap-4 justify-evenly'}>
                   {unavailable && (
                       <Tooltip content={"Coming soon!"}>
                           {docsUnavailable}
@@ -89,7 +89,7 @@ export default function Card({
                   )}
                   {!unavailable && docs}
                   <a
-                      className="py-1 my-3 mb-5 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
+                      className="w-full py-2 my-3 mb-5 flex items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
                       href={githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
