@@ -5,6 +5,7 @@ import { sfPro, inter } from "./fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
+import backgroundImage from './layout-background.jpg';
 
 export const metadata = {
   title: "Web3 Mini Games",
@@ -12,6 +13,7 @@ export const metadata = {
   metadataBase: new URL("https://mini-games-app-examples.vercel.app/"),
   themeColor: "#FFF",
 };
+
 
 export default async function RootLayout({
   children,
@@ -21,7 +23,12 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
+        <div className="fixed h-screen w-full" style={{
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundImage: `url(${backgroundImage.src})`,
+          filter: 'brightness(0.5)',
+        }} />
         <Suspense fallback="...">
           <Nav />
         </Suspense>
