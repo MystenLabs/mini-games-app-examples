@@ -44,9 +44,10 @@ export default function Card({
     )
     return (
         <div
-            className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-gray-200 bg-white shadow-md ${
+            className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-blue-950 shadow-md ${
                 large ? "md:col-span-2" : ""
             } `}
+            style={{backgroundColor: 'rgb(19,29,54)' }}
         >
 
             <h2 className="flex justify-center items-center bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
