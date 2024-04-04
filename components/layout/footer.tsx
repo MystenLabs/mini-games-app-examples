@@ -3,7 +3,7 @@ import {BuyMeACoffee, Twitter} from "../shared/icons";
 export default function Footer() {
   return (
       <div className="absolute w-full py-5 text-center">
-          <p className="text-gray-500 pb-8">
+          <p className="text-gray-400 pb-8">
               ©2024 Copyright Sui Foundation. All rights reserved.
           </p>
           <a
