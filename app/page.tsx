@@ -119,7 +119,7 @@ const features = [
     {
         title: "Plinko",
         description:
-            "Bet on balls that bounce around a series of pegs until they lands in a slot.",
+            "Bet on balls that bounce around a series of pegs until they land in a slot.",
         demo: (
             <a href={"https://plinko-poc.vercel.app/"} target={'_blank'} rel="noreferrer">
                 <Image

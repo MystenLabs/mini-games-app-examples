@@ -20,7 +20,7 @@ export default function NavBar({ session }: { session: Session | null }) {
             } z-30 transition-all`}
         >
             <div className="mx-5 flex h-16 items-center justify-end text-white ">
-                <span>The mini games are published on testnet, and not intended for real money gambling.</span>
+                <span>The mini games are published on testnet, and are not intended for real money gambling.</span>
             </div>
         </div>
     </>
