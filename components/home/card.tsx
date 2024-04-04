@@ -48,7 +48,7 @@ export default function Card({
             className={`py-6 px-4 flex flex-col gap-5 justify-around relative col-span-1 rounded-xl border border-blue-950 shadow-md ${
                 large ? "md:col-span-2" : ""
             } `}
-            style={{backgroundColor: 'rgb(22,25,59)' }}
+            style={{backdropFilter: 'blur(40px)'}}
         >
 
             <h2 className="flex justify-center items-center text-white bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
