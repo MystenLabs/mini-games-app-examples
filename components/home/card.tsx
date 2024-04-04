@@ -34,15 +34,6 @@ export default function Card({
       </a>
   )
 
-    const docsUnavailable = (<div
-        className="w-full select-none py-2 my-3 mb-5 flex items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
-    >
-        <p>🚧</p>
-        <p>
-            <span className="hidden sm:inline-block">Docs{" "}</span>
-        </p>
-    </div>
-    )
     return (
         <div
             className={`py-6 px-4 flex flex-col gap-5 justify-around relative col-span-1 rounded-xl border border-blue-950 shadow-md ${
@@ -84,11 +75,6 @@ export default function Card({
                   </ReactMarkdown>
               </div>
               <div className={'w-full flex flex-row gap-4 justify-evenly'}>
-                  {unavailable && (
-                      <Tooltip content={"Coming soon!"}>
-                          {docsUnavailable}
-                      </Tooltip>
-                  )}
                   {!unavailable && docs}
                   <a
                       className="w-full py-2 my-3 mb-5 flex items-center justify-center space-x-2 rounded-full border border-gray-600 hover:border-white bg-transparent px-5 text-sm text-white shadow-md transition-colors"
