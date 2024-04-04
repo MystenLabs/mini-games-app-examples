@@ -47,16 +47,16 @@ export default function Card({
             className={`py-4 flex flex-col justify-around relative col-span-1 rounded-xl border border-blue-950 shadow-md ${
                 large ? "md:col-span-2" : ""
             } `}
-            style={{backgroundColor: 'rgb(19,29,54)' }}
+            style={{backgroundColor: 'rgb(22,25,59)' }}
         >
 
-            <h2 className="flex justify-center items-center bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
+            <h2 className="flex justify-center items-center text-white bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
                 {title}
             </h2>
             <div className="flex h-60 items-center justify-center">{demo}</div>
             <div className="mx-auto max-w-md text-center flex flex-col items-center">
 
-              <div className="prose-sm mt-3 leading-normal text-gray-500 [text-wrap:balance] md:prose">
+              <div className="prose-sm mt-3 leading-normal text-white ">
                   <ReactMarkdown
                       components={{
                           a: ({node, ...props}) => (
@@ -64,7 +64,7 @@ export default function Card({
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   {...props}
-                                  className="font-medium text-gray-800 underline transition-colors"
+                                  className="font-medium text-white"
                               />
                           ),
                           code: ({node, ...props}) => (
@@ -72,7 +72,7 @@ export default function Card({
                                   {...props}
                                   // @ts-ignore (to fix "Received `true` for a non-boolean attribute `inline`." warning)
                                   inline="true"
-                                  className="rounded-sm bg-gray-100 px-1 py-0.5 font-mono font-medium text-gray-800"
+                                  className="rounded-sm px-1 py-0.5 font-mono font-medium text-white"
                               />
                           ),
                       }}
