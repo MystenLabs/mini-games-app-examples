@@ -27,7 +27,7 @@ export default async function RootLayout({
           backgroundPosition: 'bottom center',
           backgroundSize: 'cover',
           backgroundImage: `url(${backgroundImage.src})`,
-          filter: 'brightness(0.45)',
+          filter: 'brightness(0.45) blur(3px)',
         }} />
         <Suspense fallback="...">
           <Nav />
