@@ -1,11 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
 import { Session } from "next-auth";
-import suilogo from "../../app/sui_logo.svg";
-
 
 export default function NavBar({ session }: { session: Session | null }) {
   const scrolled = useScroll(50);
