@@ -83,7 +83,7 @@ const features = [
     description:
       "Beat the dealer by getting as close to 21 as possible without going over.",
     demo: (
-      <a href={'https://blackjack-sui.vercel.app/'} target={'_blank'} rel="noreferrer">
+      <a href={'https://blackjack.mini-games.sui.io/'} target={'_blank'} rel="noreferrer">
         <Image
           src={blackjack}
           alt="Image of Blackjack"
@@ -121,7 +121,7 @@ const features = [
         description:
             "Bet on balls that bounce around a series of pegs until they land in a slot.",
         demo: (
-            <a href={"https://plinko-poc.vercel.app/"} target={'_blank'} rel="noreferrer">
+            <a href={"https://plinko.mini-games.sui.io/"} target={'_blank'} rel="noreferrer">
                 <Image
                     src={plinko}
                     alt="Image of Plinko"
@@ -140,7 +140,7 @@ const features = [
         description:
             "A single player card game, where the goal is to move all cards to the foundation piles.",
         demo: (
-            <a href={'https://mysten-solitaire.vercel.app/'} target={'_blank'} rel="noreferrer">
+            <a href={'https://solitaire.mini-games.sui.io/'} target={'_blank'} rel="noreferrer">
                 <Image
                     src={solitaire}
                     alt="Image of Solitaire"
