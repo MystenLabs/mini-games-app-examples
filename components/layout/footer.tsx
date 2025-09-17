@@ -1,23 +1,80 @@
-import {BuyMeACoffee, Twitter} from "../shared/icons";
+import Image from "next/image";
+import suilogo from "@/app/sui_logo.svg";
+import XLogo from "@/app/XLogo.svg";
+import DiscordLogo from "@/app/discord.svg";
+import { FooterLink } from "../shared/footer-link";
+import { SocialButton } from "../shared/social-button";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-      <div className="absolute w-full py-5 text-center">
-          <p className="text-gray-400 pb-8">
-              ©2024 Copyright Sui Foundation. All rights reserved.
-          </p>
-          <a
-              href="https://twitter.com/SuiNetwork"
-              target="_blank"
-              rel="noreferrer"
-              className="mx-auto mb-20 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full px-7 py-2 transition-colors hover:opacity-70"
-              style={{backgroundColor: "rgb(75,163,251)"}}
-          >
-              <Twitter className="text-[#1d9bf0]"/>
-              <p className="text-sm font-semibold text-white">
-                  Follow us on Twitter
+    <footer className="mt-4 w-full pb-[env(safe-area-inset-bottom)]">
+      <div className="w-full px-1 pb-1 sm:px-1 sm:pb-1 md:px-2 md:pb-2">
+        <div className="rounded-3xl border border-[#FFFFFF1A] bg-[#080F1CCC] px-4 pb-6 pt-10 backdrop-blur-[90px] sm:px-6 md:px-8 lg:px-20">
+          <div className="grid gap-10 lg:items-start lg:[grid-template-columns:minmax(0,1fr)_minmax(0,1fr)_auto]">
+            <div>
+              <a
+                href="https://sui.io/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center"
+                aria-label="Sui homepage"
+              >
+                <Image src={suilogo} alt="Sui logo" className="h-10 w-auto" />
+              </a>
+              <p className="mt-4 max-w-md text-base leading-7 text-slate-300">
+                Learn, build, and grow with our community.
               </p>
-          </a>
+            </div>
+            <nav>
+              <h3 className="text-sm font-semibold tracking-wide text-slate-200">
+                Explore
+              </h3>
+              <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-3">
+                <FooterLink href="https://sui.io/" label="Introduction" />
+                <FooterLink href="https://sui.io/events" label="Events" />
+                <FooterLink
+                  href="https://docs.sui.io/"
+                  label="Developer Portal"
+                />
+                <FooterLink href="https://blog.sui.io/" label="Blog" />
+              </div>
+            </nav>
+
+            <div>
+              <h3 className="text-sm font-semibold tracking-wide text-slate-200">
+                Join the Community
+              </h3>
+              <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:flex-nowrap lg:gap-6">
+                <SocialButton
+                  href="https://discord.com/invite/sui"
+                  ariaLabel="Join us on Discord"
+                >
+                  <Image src={DiscordLogo} alt="Discord" className="h-5 w-5" />
+                  <span className="text-sm font-semibold">
+                    Join us on Discord
+                  </span>
+                </SocialButton>
+
+                <SocialButton
+                  href="https://x.com/SuiNetwork"
+                  ariaLabel="Follow us on Twitter"
+                >
+                  <Image src={XLogo} alt="X" className="h-5 w-5" />
+                  <span className="text-sm font-semibold">
+                    Follow us on Twitter
+                  </span>
+                </SocialButton>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 h-px w-full bg-white/10" />
+          <p className="mt-6 text-center text-xs text-slate-400">
+            ©{year} Copyright Sui Foundation. All rights reserved.
+          </p>
+        </div>
       </div>
+    </footer>
   );
 }
