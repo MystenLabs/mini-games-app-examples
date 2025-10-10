@@ -69,7 +69,7 @@ export default async function Home() {
                 )
               }
               githubUrl={githubUrl}
-              // docsUrl={docsUrl}
+              docsUrl={docsUrl}
               unavailable={unavailable}
             />
           ),

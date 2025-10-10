@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import { Github } from "@/components/shared/icons";
+import OpenBook from "@/components/shared/icons/openBook";
 // import { nFormatter } from "@/lib/utils";
 // import Tooltip from "@/components/shared/tooltip";
 // import OpenBook from "@/components/shared/icons/openBook";
@@ -9,7 +10,8 @@ export default function Card({
   title,
   description,
   demo,
-  githubUrl /*docsUrl,*/,
+  githubUrl,
+  docsUrl,
   unavailable,
   large,
 }: {
@@ -17,23 +19,23 @@ export default function Card({
   description: string;
   demo: ReactNode;
   githubUrl: string;
-  //   docsUrl: string;
+  docsUrl: string;
   unavailable?: boolean;
   large?: boolean;
 }) {
-  //   const docs = (
-  //     <a
-  //       className="my-3 mb-5 flex w-full items-center justify-center space-x-2 rounded-full border border-gray-600 bg-transparent px-5 py-2 text-sm text-white shadow-md transition-colors hover:border-white"
-  //       href={docsUrl}
-  //       target="_blank"
-  //       rel="noopener noreferrer"
-  //     >
-  //       <OpenBook />
-  //       <p>
-  //         <span className="hidden sm:inline-block">Docs </span>
-  //       </p>
-  //     </a>
-  //   );
+    const docs = (
+      <a
+        className="my-3 mb-5 flex w-full items-center justify-center space-x-2 rounded-full border border-gray-600 bg-transparent px-5 py-2 text-sm text-white shadow-md transition-colors hover:border-white"
+        href={docsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <OpenBook />
+        <p>
+          <span className="hidden sm:inline-block">Docs </span>
+        </p>
+      </a>
+    );
 
   return (
     <div
@@ -74,7 +76,7 @@ export default function Card({
           </ReactMarkdown>
         </div>
         <div className={"flex w-full flex-row justify-evenly gap-4"}>
-          {!unavailable /*&& docs*/}
+          {!unavailable && docs}
           <a
             className="my-3 mb-5 flex w-full items-center justify-center space-x-2 rounded-full border border-gray-600 bg-transparent px-5 py-2 text-sm text-white shadow-md transition-colors hover:border-white"
             href={githubUrl}
