@@ -36,25 +36,25 @@ export default async function Home() {
             <Image
               src={suilogo}
               alt="Sui logo"
-              className="mr-2 rounded-sm"
+              className="mr-2 rounded-xs"
             ></Image>
           </Link>
         </div>
         <h1
-          className="animate-fade-up bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent text-white opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
+          className="animate-fade-up bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent text-white opacity-0 drop-shadow-xs text-balance md:text-7xl md:leading-20"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
           Web3 Mini Games <br />
           built on Sui
         </h1>
         <p
-          className="mt-12 animate-fade-up-subtitle text-center text-white opacity-0 [text-wrap:balance] md:text-xl"
+          className="mt-12 animate-fade-up-subtitle text-center text-white opacity-0 text-balance md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           A collection of mini games, to inspire the community of Sui.
         </p>
       </div>
-      <div className="my-20 grid max-w-screen-xl animate-fade-up grid-cols-1 gap-10 px-5 md:grid-cols-2 xl:px-0">
+      <div className="my-20 grid max-w-(--breakpoint-xl) animate-fade-up grid-cols-1 gap-10 px-5 md:grid-cols-2 xl:px-0">
         {features.map(
           ({ title, description, demo, githubUrl, docsUrl, unavailable }) => (
             <Card

@@ -46,7 +46,7 @@ export default function Card({
         backdropFilter: "blur(40px)",
       }}
     >
-      <h2 className="flex items-center justify-center bg-clip-text font-display text-xl font-bold text-transparent text-white [text-wrap:balance] md:text-3xl md:font-normal">
+      <h2 className="flex items-center justify-center bg-clip-text font-display text-xl font-bold text-transparent text-white text-balance md:text-3xl md:font-normal">
         {title}
       </h2>
       <div className="flex items-center justify-center">{demo}</div>
@@ -67,7 +67,7 @@ export default function Card({
                   {...props}
                   // @ts-ignore (to fix "Received `true` for a non-boolean attribute `inline`." warning)
                   inline="true"
-                  className="rounded-sm px-1 py-0.5 font-mono font-medium text-white"
+                  className="rounded-xs px-1 py-0.5 font-mono font-medium text-white"
                 />
               ),
             }}
