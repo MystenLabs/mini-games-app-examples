@@ -39,15 +39,15 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "^0.5.10",
     "@types/ms": "^0.7.32",
-    "autoprefixer": "^10.4.16",
     "concurrently": "^7.6.0",
     "eslint-config-next": "16.1.4",
     "postcss": "^8.4.31",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.8",
-    "tailwindcss": "^3.3.3"
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18"
   },
   "pnpm": {
     "overrides": {

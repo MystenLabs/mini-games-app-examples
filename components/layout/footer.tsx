@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="mt-4 w-full pb-[env(safe-area-inset-bottom)]">
       <div className="w-full px-1 pb-1 sm:px-1 sm:pb-1 md:px-2 md:pb-2">
         <div className="rounded-3xl border border-[#FFFFFF1A] bg-[#080F1CCC] px-4 pb-6 pt-10 backdrop-blur-[90px] sm:px-6 md:px-8 lg:px-20">
-          <div className="grid gap-10 lg:items-start lg:[grid-template-columns:minmax(0,1fr)_minmax(0,1fr)_auto]">
+          <div className="grid gap-10 lg:items-start lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto]">
             <div>
               <a
                 href="https://sui.io/"
