@@ -2,7 +2,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
-import Nav from "@/components/layout/nav";
+import NavBar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import backgroundImage from "./bg-layout.svg";
@@ -32,7 +32,7 @@ export default async function RootLayout({
           }}
         />
         <Suspense fallback="...">
-          <Nav />
+          <NavBar />
         </Suspense>
         <main className="flex min-h-screen w-full flex-col items-center justify-center pb-2 pt-32">
           {children}
