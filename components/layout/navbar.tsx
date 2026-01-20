@@ -15,7 +15,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                     : "bg-white/0"
             } z-30 transition-all`}
         >
-            <div className="mx-5 flex h-16 items-center justify-end text-white ">
+            <div className="mx-5 flex min-h-16 py-2 text-center items-center justify-end text-white ">
                 <span>The [mini games] are provided for testnet purposes only and do not involve real money or the opportunity to win real money.</span>
             </div>
         </div>
